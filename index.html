@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centered Search UI</title>
+    <style>
+        /* Base page styling and centering */
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* Creates the subtle dark blue/black glow effect from the image */
+            background: radial-gradient(circle at center, #1a2235 0%, #0f1014 60%);
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            color: #e3e3e3;
+        }
+
+        /* Wrapper for the heading and search bar */
+        .container {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 24px;
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 400;
+            margin: 0;
+        }
+
+        /* The main search input container */
+        .search-bar {
+            display: flex;
+            align-items: center;
+            background-color: #1e1f20;
+            padding: 12px 20px;
+            border-radius: 30px;
+            width: 600px;
+            max-width: 90vw; /* Keeps it responsive on smaller screens */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .icon {
+            fill: #c4c7c5;
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+            transition: fill 0.2s;
+        }
+
+        .icon:hover {
+            fill: #ffffff;
+        }
+
+        .plus-icon {
+            margin-right: 12px;
+        }
+
+        /* The actual typing area */
+        input {
+            flex: 1;
+            background: transparent;
+            border: none;
+            color: #e3e3e3;
+            font-size: 1rem;
+            outline: none;
+        }
+
+        input::placeholder {
+            color: #8e918f;
+        }
+
+        /* The "Pro" dropdown styling */
+        .pro-badge {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            background-color: transparent;
+            border: none;
+            color: #c4c7c5;
+            font-size: 0.9rem;
+            cursor: pointer;
+            margin-right: 16px;
+        }
+        
+        .pro-badge:hover {
+            color: #ffffff;
+        }
+
+        .mic-icon {
+            margin-left: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Search bar is all yours</h1>
+        
+        <div class="search-bar">
+            <svg class="icon plus-icon" viewBox="0 0 24 24">
+                <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+            </svg>
+
+            <input type="text" placeholder="Ask Gemini">
+
+            <button class="pro-badge">
+                Pro
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M7 10l5 5 5-5z"/>
+                </svg>
+            </button>
+
+            <svg class="icon mic-icon" viewBox="0 0 24 24">
+                <path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3zm-1-9c0-.55.45-1 1-1s1 .45 1 1v6c0 .55-.45 1-1 1s-1-.45-1-1V5zm6 6c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-3.08c3.39-.49 6-3.39 6-6.92h-2z"/>
+            </svg>
+        </div>
+    </div>
+
+</body>
+</html>
